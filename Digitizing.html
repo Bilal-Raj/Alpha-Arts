@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!-- CDN BOOTSTRAP -->
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ICON LINK -->
+<link rel="stylesheet" href="fontawesome-free-6.3.0-web/fontawesome-free-6.3.0-web/css/all.css">
+<link rel="stylesheet" href="./addtocart/index.css">
+<script>
+		
+  function Delete(e){
+    let items = [];
+    JSON.parse(localStorage.getItem('items')).map(data=>{
+      if(data.id != e.parentElement.parentElement.children[0].textContent){
+        
+        items.push(data);
+
+      }
+    });
+    localStorage.setItem('items',JSON.stringify(items));
+    window.location.reload();
+  };
+</script>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+</style>
+</head>
+
+<!-- <style>
+  .mainimage{
+  background-image: url(./bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  
+  }
+</style> -->
+
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-light">
+        <div class="container-fluid">
+        
+            <!-- Links -->
+            <ul class="nav justify-content-center">
+        <a href="" class="navbar-brand">
+
+          <img src="./IMAGES/AG LOGO.png"  width="50px">
+        </a>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="HOME.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="Pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="CONTACTUS.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="About.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="Gallery.html">Gallery</a>
+              </li>
+              <!-- new -->
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+              <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="Vector.html">Vector</a></li>
+             <li><a class="dropdown-item" href="Digitizing.html">Digitizing</a></li>
+             <li><a class="dropdown-item" href="Services.html">Services</a></li>
+             </ul>
+             </li>
+            </ul>
+            <div class="iconShopping">
+              <p class="badge bg-dark text-light rounded-pill">0</p>
+              <i class="fa fa-shopping-cart"></i>
+            </div>
+            
+  
+          </div>
+          
+        </nav>
+       
+        
+        <img src="./IMAGES/bg4.png" width="100%" height="300x">
+
+        
+        <!-- CARDS -->
+        <br>
+          <div class="container ">
+           <center><h2><b class=" text-danger">Available Vector</b></h2></center>
+           <hr>
+           <div class="row work" id="#allproduct">
+            <div class="col-lg-3" data-type="five">
+              <div class="card h-100">
+                <img class="h-100" src="./IMAGES/BEAR LOGO V1-01.jpg"/>
+                <div class="card-body">
+                  <h5>BEAR LOGO</h5>
+                  <p>$<span>50</span></p>
+                  <span>
+                                      <i class="fa-regular fa-star text-warning"></i>
+                                      <i class="fa-regular fa-star text-warning"></i>
+                                      <i class="fa-regular fa-star text-warning"></i>
+                                      <i class="fa-regular fa-star text-warning"></i>
+                                      <i class="fa-regular fa-star text-warning"></i>
+  
+                                  </span>
+                  <a href="#" title="add to cart" class="attToCart btn btn-dark">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card h-100">
+                <img class="h-100" src="./IMAGES/Earing 6-01.jpg"/>
+                <div class="card-body">
+                  <h5>EARING LOGO</h5>
+                  <p>$<span>80</span></p>
+                  <a href="#" title="add to cart" class="attToCart btn btn-dark">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card h-100">
+                <img class="h-100" src="./IMAGES/Bayside Angler Group Logo-01-01.jpg"/>
+                <div class="itemInfo">
+                  <h5>SEA LOGO</h5>
+                  <p>$<span>100</span></p>
+                  <a href="#" title="add to cart" class="attToCart btn btn-dark">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+            
+          <!-- END CARDS -->
+        
+        <br>
+            <div class="cartBox">
+            <div class="cart">
+              <i class="fa fa-close"></i>
+              <h1>Cart</h1>
+              <table class="table bg-dark text-danger"></table>
+            </div>
+          </div>
+          <!-- END -->
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6">
+                Our expert digitizing team will make your logo look beautiful as well as run smoothly on your machines. Both you and your customer will be thrilled. Sequins, applique, chinellle, foam- we’ll do it all!
+                Flat Pricing: Left chest (up to 5 inches): $15 Mid size (b/w 5-8 inches) $30 Jacket back (above 8 inches) $60 File revisions $0.
+            <br>
+           
+            <br>
+            <h5 class="text-danger">Turnaround:</h5>
+            <br>
+            Files will be returned within 24 hours, except on public holidays.
+            Formats accepted: All graphic files which can be opened in major softwares (Adobe photoshop, acrobat, illustrator, etc.,).
+            <br>
+            <br>
+            <h5 class="text-danger">Formats we send back:</h5>
+            <br>
+            We do absolutely no auto punching. We’ll send back any format you like- dst, cnd, ofm, exp etc. If required by customer we send back original files.
+            Payment: All major credit cards (Amex, Visa, Master, Discover) accepted; as well as paypal.
+            <br>
+            <br>
+            <h5 class="text-danger">Website or email:</h5>
+            <br>
+            Our website is extremely easy to use. However, if you prefer to use email only, we’ll maintain your account on the website for you. Email us: info@AlphaArts&Graphics.
+            <br>
+            <h5 class="text-danger">Customer service:</h5>
+            We are here almost 24hours a day. Email at info@AlphaArts&Graphics. or call us: 03112616956
+    
+    
+            </div>
+    
+            <div class="col-md-6">
+            <img src="https://skpunching.com/wp-content/uploads/2018/02/555.jpg" width="400px" style="margin-left: 100px;">
+            <img src="https://skpunching.com/wp-content/uploads/2019/04/Adjust-Your-Color-sew-570x611.jpg" width="400px" style="margin-left: 100px;">
+    
+            </div>
+    
+            
+            </div>
+            </div>
+          </div>
+          
+            <br>
+            <br>
+            
+
+
+           <!-- FOOTER AREA -->
+           <div class="container-fluid bg-dark text-light px-5">
+            <div class="row">
+              <div class="col-md-3">
+              <img src="./IMAGES/AG LOGO.png" class="mt-5"  width="100px">
+              <h6>Alpha Arts Provide The Special Services With Good Turn Arround TIME AND WE HAVE A LONG TEAM WHAT THEY CAN MAKE ANY TYPE OF DESIGNS LIKE THAT DIGITIZING, SCREEN PRINTING,PATCHES.</h6>
+              </div>
+              <div class="col-md-3 p-5"  >
+                <h4>Quick Links</h4>
+                <ul class="list-unstyled">
+                  <li><a href="" class="nav-link text-light text-center">Home</a></li>
+                  <li><a href="Pricing.html" class="nav-link text-light text-center">Pricing</a></li>
+                  <li><a href="CONTACTUS.html" class="nav-link text-light text-center">Contact</a></li>
+                  <li><a href="Vector.html" class="nav-link text-light text-center">Vector</a></li>
+                  <li><a href="Digitizing.html" class="nav-link text-light text-center">Digitizing</a></li>
+                  <li><a href="Services.html" class="nav-link text-light text-center">Service</a></li>
+
+               
+                </ul>
+              </div>
+        
+
+              
+              
+
+              <div class="col-md-3 p-5"  >
+                <h4>Our Expertise</h4>
+                <ul>
+                  <li>Cap Digitizng</li>
+                  <li>Left Chest Digitizing</li>
+                  <li>Puff Digitizing</li>
+                  <li>Tuft Digitizing</li>
+                  <li>Jacket Bag Digitizing</li>
+                </ul>
+              </div>
+              <div class="col-md-3" >
+                <div class="row">
+                  <div class="col-lg-12 gy-5">
+                    <b class="mb-5">CONTACT US:</b>
+                    <br>
+                    <i class="fa-sharp fa-solid fa-phone-volume mt-3">&nbsp;03132606877</i>
+                    <br>
+                    <i class="fa-solid fa-envelope"></i>&nbsp;info@alphagraphic2211.com</i>
+                   
+                  </div>
+                  <div class="col-lg-12 mt-4">
+                    <B >SOCIAL ACCOUNTS:</B>
+                    <br><br>
+                    <a href="https://www.facebook.com/"> <i class="fa-brands fa-facebook text-danger"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://www.instagram.com/"> <i class="fa-brands fa-instagram text-danger"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den"><i class="fa-brands fa-twitter  text-danger"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://www.paypal.com/us/signin"><i class="fa-brands fa-paypal text-danger"></i></a>
+                  
+                  </div>
+                </div>
+               
+              </div>
+            
+    
+            </div>
+            </div>
+    
+            <div class="container-fluid bg-danger text-light text-center">
+              <footer>
+              <p>&copy; 2019 All rights reserved. ALPHA ART & GRAPHICS</p>
+            </footer>
+           </div>
+           <script src="./addtocart/index.js"></script>
+          </body>
+          </html>
+            
+           
+  
+          
+          
+          
+         
+           
+        
+      
+      
+         
